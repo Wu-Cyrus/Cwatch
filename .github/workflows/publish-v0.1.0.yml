@@ -17,7 +17,7 @@ jobs:
         run: |
           set -eu
           for file in cwatch_0.1.0-1_amd64.deb SHA256SUMS; do
-            gh api -H 'Accept: application/vnd.github.raw+json' "repos/$REPO/contents/downloads/v0.1.0/$file?ref=3ce5048a6d4dfdebc16990489e2b6754898220be" > "$file"
+            curl --fail --silent --show-error --retry 3 --location "https://raw.githubusercontent.com/$REPO/3ce5048a6d4dfdebc16990489e2b6754898220be/downloads/v0.1.0/$file" --output "$file"
           done
           sha256sum -c SHA256SUMS
           if ! gh release view v0.1.0 --repo "$REPO" >/dev/null 2>&1; then
