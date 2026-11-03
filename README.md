@@ -4,7 +4,7 @@ Cwatch 是 Ubuntu 上的实时变量观察与修改工具。打开工程即可�
 
 ## 下载与安装
 
-[Cwatch 0.1.0 安装包](https://github.com/Wu-Cyrus/Cwatch/raw/refs/heads/main/downloads/v0.1.0/cwatch_0.1.0-1_amd64.deb) · [SHA-256 校验文件](downloads/v0.1.0/SHA256SUMS)
+[Cwatch 0.1.0 安装包](https://github.com/Wu-Cyrus/Cwatch/releases/download/v0.1.0/cwatch_0.1.0-1_amd64.deb) · [SHA-256 校验文件](https://github.com/Wu-Cyrus/Cwatch/releases/download/v0.1.0/SHA256SUMS)
 
 适用 Ubuntu 22.04 amd64。在下载目录执行：
 
