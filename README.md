@@ -1,6 +1,6 @@
 # Cwatch
 
-Cwatch 是 Ubuntu 上的实时变量观察与修改工具。打开工程即可浏览和搜索变量，提前保存观察列表，程序运行后自动刷新。
+Cwatch 是 Ubuntu 上的实时调参工具，可以实现变量的观察与修改，相当于单片机keil中的watch功能，配合plotjugger使用最佳。
 
 ## 下载与安装
 
