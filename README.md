@@ -1,6 +1,6 @@
 # Cwatch
 
-Cwatch 是 Ubuntu 上的实时调参工具，不依赖于ros实现，因而可以实现所有全局变量的观察与修改，相当于单片机keil中的watch功能，配合plotjugger使用最佳。
+Cwatch 是 Ubuntu 上的实时调参工具，不依赖于ros实现，因而可以实现所有全局变量的观察与修改，相当于单片机keil中的watch功能，弥补了rqt等传统ros工具的缺陷，大大提升了调参的便捷性。
 
 ## 下载与安装
 
