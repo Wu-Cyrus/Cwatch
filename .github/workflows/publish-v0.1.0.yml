@@ -1,0 +1,27 @@
+name: Publish Cwatch v0.1.0
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/publish-v0.1.0.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify and publish the packaged release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -eu
+          for file in cwatch_0.1.0-1_amd64.deb SHA256SUMS; do
+            gh api -H 'Accept: application/vnd.github.raw+json' "repos/$REPO/contents/downloads/v0.1.0/$file?ref=3ce5048a6d4dfdebc16990489e2b6754898220be" > "$file"
+          done
+          sha256sum -c SHA256SUMS
+          if ! gh release view v0.1.0 --repo "$REPO" >/dev/null 2>&1; then
+            gh release create v0.1.0 --repo "$REPO" --draft --target 3ce5048a6d4dfdebc16990489e2b6754898220be --title "Cwatch 0.1.0" --notes "Ubuntu 22.04 amd64. 下载 deb 并使用 sudo apt install ./cwatch_0.1.0-1_amd64.deb 安装。使用方式见仓库 README。"
+          fi
+          gh release upload v0.1.0 --repo "$REPO" cwatch_0.1.0-1_amd64.deb SHA256SUMS --clobber
+          gh release edit v0.1.0 --repo "$REPO" --draft=false
