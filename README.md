@@ -4,7 +4,7 @@ Cwatch 是 Ubuntu 上的实时调参工具，不依赖于ros实现，因而可�
 
 ## 下载与安装
 
-[Cwatch 0.1.0 安装包](https://github.com/Wu-Cyrus/Cwatch/releases/download/v0.2.0/cwatch_0.2.0-1_amd64.deb) 
+[Cwatch 0.2.0 安装包](https://github.com/Wu-Cyrus/Cwatch/releases/download/v0.2.0/cwatch_0.2.0-1_amd64.deb) 
 
 适用 Ubuntu 22.04 amd64。在下载目录执行：
 
